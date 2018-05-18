@@ -1,0 +1,17 @@
+{
+  "verbose": true,
+  "restartable": "r",
+  "ignore": ["*.test.js", "fixtures/*"],
+  "execMap": {
+    "js": "node --harmony"
+  },
+  "events": {
+    "restart": "osascript -e 'display notification \"App restarted due to:\n'$FILENAME'\" with title \"nodemon\"'"
+  },
+  "watch": [
+    "config/",
+    "scripts/",
+    ".env",
+    ".env.local"
+  ]
+}
